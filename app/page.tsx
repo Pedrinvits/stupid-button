@@ -1,6 +1,5 @@
 import Donate from "@/components/donate";
 import Donut from "@/components/donut";
-import Image from "next/image";
 
 export default function Home() {
   return (
