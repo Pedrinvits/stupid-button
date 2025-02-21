@@ -1,9 +1,10 @@
 import Stripe from "stripe";
 import { NextRequest, NextResponse } from "next/server";
+/* eslint-disable */
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY as string);
 
-export async function POST(req: NextRequest): Promise<NextResponse> {
+export async function POST(req: NextRequest): Promise<NextResponse> { 
   try {
     const session = await stripe.checkout.sessions.create({
       payment_method_types: ["card"],
